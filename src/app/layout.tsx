@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import Script from "next/script";
 import "./globals.css";
 
 import Header from '@/app/components/Header';
@@ -22,18 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <GoogleTagManager gtmId="GTM-PFS3VB7Q" />
+
       <head>
         <title>Grupo Cultural Albatros</title>
       </head>
       <body className="flex flex-col min-h-screen overflow-x-hidden">
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFS3VB7Q"
-          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
+
+        <GoogleTagManager gtmId="GTM-PFS3VB7Q" />
+
         <DecorativeLines />
+
         <Header />
         <main>{children}</main>
         <MobileContactButtons
-          phoneNumber="525617015459"     // ¡Reemplaza con el número real del cliente!
+          phoneNumber="525617015459"
         />
         <Footer />
       </body>

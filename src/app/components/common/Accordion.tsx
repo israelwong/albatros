@@ -49,22 +49,19 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ value, trigger, children 
     >
         <Accordion.Header className="flex">
             <Accordion.Trigger
-                // Padding, tipografía, color del texto, fondo suave y hover
-                // Habilitar group-hover para el icono
                 className="
                     flex flex-1 items-center justify-between px-6 py-4 md:px-8 md:py-5
-                    text-albatrosBlue font-heading text-lg md:text-xl font-semibold
-                    bg-white hover:bg-gray-50 transition-colors duration-200
-                    focus:outline-none group // 'group' es crucial para que group-data-[state=open]:rotate-180 funcione
+                    text-zinc-900 font-heading text-lg md:text-xl font-semibold
+                    bg-white hover:bg-gray-100 transition-colors duration-200
+                    focus:outline-none group
                 "
             >
                 {trigger}
                 <ChevronDown
-                    // Icono rojo de acento, animación de giro al abrir
                     className="
-                        w-6 h-6 text-albatrosRed ml-4
-                        transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] // Curva de animación
-                        group-data-[state=open]:rotate-180 // Gira 180 grados cuando el padre 'group' está abierto
+                        w-6 h-6 text-blue-500 ml-4
+                        transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)]
+                        group-data-[state=open]:rotate-180
                     "
                     aria-hidden
                 />
@@ -73,7 +70,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ value, trigger, children 
         <Accordion.Content
             // Tipografía de respuesta, padding, línea divisoria y animaciones de slide
             className="
-                overflow-hidden text-gray-700 text-base md:text-lg
+                overflow-hidden text-zinc-700 text-base md:text-lg
                 data-[state=closed]:animate-slide-up data-[state=open]:animate-slide-down
                 px-6 pb-4 md:px-8 md:pb-6
                 border-t border-gray-200

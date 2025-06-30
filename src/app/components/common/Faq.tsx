@@ -3,7 +3,7 @@
 
 import React from 'react';
 import CustomAccordion, { AccordionItemProps } from '@/app/components/common/Accordion';
-import DiagonalSeparator from '@/app/components/common/DiagonalSeparator'; // Importa el componente
+
 
 const FaqSection: React.FC = () => {
     const faqItems: AccordionItemProps[] = [
@@ -111,9 +111,6 @@ const FaqSection: React.FC = () => {
 
     return (
         <section className="w-full bg-white text-albatrosBlue">
-
-            <DiagonalSeparator colorClass="bg-zinc-300" direction="right" height="h-12" offset="-mt-0" />
-
             <div className="container mx-auto max-w-4xl py-16 px-6 md:px-12">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-center mb-12">
                     Preguntas Frecuentes

@@ -3,62 +3,34 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Phone, CalendarCheck } from 'lucide-react'; // Importamos CalendarCheck para agendar
+import { Phone, CalendarCheck } from 'lucide-react';
 
-import { usePathname } from 'next/navigation'; // Importamos usePathname para obtener la ruta actual
+import { usePathname } from 'next/navigation';
+// Importamos solo los helpers de contexto y manejo de clic desde el concentrador
+import { getWhatsappContext, handleWhatsappClickWithContext } from '@/lib/whatsapp';
+import { handleCallClick } from '@/lib/phone'; // El helper de llamada no cambia
 
 interface MobileContactButtonsProps {
-    whatsappNumber: string;
-    phoneNumber: string;
+    // whatsappNumber ya no es prop aquí, se gestiona internamente en '@/lib/whatsapp'
+    phoneNumber: string; // El número de teléfono para la llamada directa
 }
 
-const MobileContactButtons: React.FC<MobileContactButtonsProps> = ({ whatsappNumber, phoneNumber }) => {
-    const pathname = usePathname(); // Obtenemos la ruta actual
+const MobileContactButtons: React.FC<MobileContactButtonsProps> = ({ phoneNumber }) => {
+    const pathname = usePathname(); // Obtenemos la ruta actual para el contexto
+    const currentWhatsappContext = getWhatsappContext(pathname); // Determinamos el contexto (general, albatros, tecno)
 
-    // Función para formatear el enlace de WhatsApp con mensaje codificado
-    const formatWhatsappLink = (number: string, message: string) => {
-        const cleanedNumber = number.replace(/\D/g, ''); // Elimina caracteres no numéricos
-        const encodedMessage = encodeURIComponent(message); // Codifica el mensaje para URL
-        return `https://wa.me/${cleanedNumber}?text=${encodedMessage}`;
-    };
-
-    // Función para determinar los mensajes de WhatsApp según la ruta actual
-    const getWhatsappMessages = (path: string) => {
-        // Mensajes específicos para la página de Colegio Albatros
-        if (path.includes('/oferta-educativa/albatros')) {
-            return {
-                agendarCita: "Hola, quisiera agendar una cita para Colegio Albatros y recibir una oferta especial.",
-                dudasInscripcion: "Hola, me interesa inscribir a mi hijo(a) en Colegio Albatros o tengo dudas al respecto."
-            };
-        }
-        // Mensajes específicos para la página de Colegio Tecno
-        if (path.includes('/oferta-educativa/tecno')) {
-            return {
-                agendarCita: "Hola, quisiera agendar una cita para Colegio Tecno y recibir una oferta especial.",
-                dudasInscripcion: "Hola, me interesa inscribir a mi hijo(a) en Colegio Tecno o tengo dudas al respecto."
-            };
-        }
-        // Mensajes predeterminados para el Home y otras páginas generales
-        return {
-            agendarCita: "Hola, quisiera agendar una cita para conocer el colegio y recibir una oferta especial.",
-            dudasInscripcion: "Hola, tengo dudas generales sobre el Grupo Cultural Albatros y quisiera que me ayuden."
-        };
-    };
-
-    const currentMessages = getWhatsappMessages(pathname); // Obtenemos los mensajes para la ruta actual
-
-    // Definición de colores en hexadecimal (como acordamos, debido a problemas con clases de Tailwind)
-    const albatrosRedHex = '#E53E3E'; // Color Rojo para el botón de Agendar
-    const whatsappGreenHex = '#25D366'; // Color Verde para el botón de WhatsApp
+    // Definición de colores en hexadecimal (se mantienen aquí ya que son estilos visuales del componente)
+    const albatrosRedHex = '#E53E3E'; // Color Rojo para el botón de Agendar (calendario)
+    const whatsappGreenHex = '#25D366'; // Color Verde para el botón de WhatsApp (dudas/inscripción)
     const blackHex = '#000000'; // Color Negro para el botón de Llamada
 
     return (
-        // Contenedor principal: fixed bottom-6 right-4 z-50 (más alto z-index)
-        <div className="fixed bottom-6 right-4 z-50">
+        <div className="fixed bottom-6 right-4 z-[9999] !block !visible">
             <div className="flex flex-col space-y-3">
                 {/* Botón de Agendar Cita (icono de Calendario que abre WhatsApp) */}
                 <Link
-                    href={formatWhatsappLink(whatsappNumber, currentMessages.agendarCita)}
+                    href="#" // Se mantiene un href de fallback, la acción la maneja onClick
+                    onClick={(e) => handleWhatsappClickWithContext(e, currentWhatsappContext, 'agendarCita')}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Agendar cita"
@@ -72,12 +44,13 @@ const MobileContactButtons: React.FC<MobileContactButtonsProps> = ({ whatsappNum
                 "
                     style={{ backgroundColor: albatrosRedHex }}
                 >
-                    <CalendarCheck size={24} /> {/* Icono de Calendario */}
+                    <CalendarCheck size={24} />
                 </Link>
 
                 {/* Botón de Dudas / Inscripción (icono de WhatsApp) */}
                 <Link
-                    href={formatWhatsappLink(whatsappNumber, currentMessages.dudasInscripcion)}
+                    href="#" // Se mantiene un href de fallback
+                    onClick={(e) => handleWhatsappClickWithContext(e, currentWhatsappContext, 'tengoDudas')} // Usamos 'tengoDudas' como acción principal
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Dudas o inscripción por WhatsApp"
@@ -106,14 +79,14 @@ const MobileContactButtons: React.FC<MobileContactButtonsProps> = ({ whatsappNum
                         <path
                             d="M12.04 2.3c-5.2 0-9.4 4.2-9.4 9.4 0 1.7.5 3.3 1.3 4.8l-1.4 4.5 4.7-1.3c1.4.8 3 1.2 4.8 1.2 5.2 0 9.4-4.2 9.4-9.4 0-5.2-4.2-9.4-9.4-9.4z"
                             stroke="#FFFFFF"
-                            strokeWidth="1.5"
-                        />
+                            strokeWidth="1.5" />
                     </svg>
                 </Link>
 
                 {/* Botón de Llamada Telefónica */}
                 <Link
                     href={`tel:${phoneNumber}`}
+                    onClick={(event) => handleCallClick(event, phoneNumber)}
                     aria-label="Llamar al colegio"
                     className="
                     flex items-center justify-center
@@ -124,7 +97,7 @@ const MobileContactButtons: React.FC<MobileContactButtonsProps> = ({ whatsappNum
                 "
                     style={{ backgroundColor: blackHex }}
                 >
-                    <Phone size={20} /> {/* Icono de teléfono */}
+                    <Phone size={20} />
                 </Link>
             </div>
         </div>

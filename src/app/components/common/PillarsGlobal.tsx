@@ -5,7 +5,6 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image'; // Importar Image de Next.js
-import DiagonalSeparator from '@/app/components/common/DiagonalSeparator'; // Importa el componente
 
 interface PillarCardProps {
     imageSrc: string; // Nueva prop para la imagen
@@ -79,12 +78,7 @@ const PillarsSection: React.FC = () => {
 
     return (
         <section className="w-full bg-zinc-200 text-albatrosBlue">
-            <DiagonalSeparator colorClass="bg-red-900" direction="right" height="h-24" offset="-mt-12" />
             <div className="container mx-auto py-16 px-6 md:px-12">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-center mb-12 text-red-800">
-                    Nuestros Pilares
-                </h2>
-
                 <div className="embla" ref={emblaRef}>
                     <div className="embla__container flex -ml-4">
                         {pillars.map((pillar, index) => (

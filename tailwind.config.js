@@ -14,6 +14,8 @@ module.exports = {
         albatrosWhite: "#FFFFFF",
         albatrosBlack: "#000000",
         whatsappGreen: "#25D366",
+        tecnoPurple: "#5D2E8E", // Un tono de morado basado en tu imagen, puedes ajustarlo
+        tecnoLightPurple: "#9361CE", // Un tono más claro para acentos si es necesario
       },
       fontFamily: {
         heading: ["Montserrat", "sans-serif"],

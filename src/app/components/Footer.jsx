@@ -1,11 +1,17 @@
 // src/app/components/Footer.jsx
+"use client"; // Necesario para usar handleCallClick con onClick
 
 import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Phone, Mail } from "lucide-react"; // Íconos para redes sociales y contacto
+import { handleCallClick } from "@/lib/phone"; // Importa el helper para llamadas
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // Actualiza con los números y emails reales
+  const contactPhone = "55 1701 5459"; // Número de Colegio Tecno que proporcionaste
+  const contactEmail = "colegiotecnoz@gmail.com";
 
   return (
     <footer className="bg-albatrosBlue text-albatrosWhite py-8 px-6 md:px-12">
@@ -15,12 +21,23 @@ const Footer = () => {
           <h3 className="font-heading text-xl font-bold mb-4">Contacto</h3>
           <p className="font-body mb-2 flex items-center">
             <Phone size={18} className="mr-2" />
-            <span>+52 55 1234 5678</span> {/* Reemplazar con el número real */}
+            {/* Usamos un botón invisible o un span clickeable para el onClick */}
+            <span
+              className="cursor-pointer hover:text-albatrosRed transition-colors duration-200"
+              onClick={(e) => handleCallClick(e, contactPhone)}
+              aria-label={`Llamar a ${contactPhone}`}
+            >
+              {contactPhone}
+            </span>
           </p>
           <p className="font-body mb-2 flex items-center">
             <Mail size={18} className="mr-2" />
-            <span>colegiotecnoz@gmail.com</span>{" "}
-            {/* Reemplazar con el email real */}
+            <a
+              href={`mailto:${contactEmail}`}
+              className="hover:text-albatrosRed transition-colors duration-200"
+            >
+              {contactEmail}
+            </a>
           </p>
           <p className="font-body text-sm mt-4">
             Horario de atención: Lunes a Viernes de 8:00 a 16:00 hrs.
@@ -63,7 +80,6 @@ const Footer = () => {
                 Contacto
               </Link>
             </li>
-            {/* Si tienes una página de privacidad, agrégala aquí */}
             <li>
               <Link
                 href="/privacidad"
@@ -75,7 +91,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Columna 3: Redes Sociales y Logo (opcional, si quieres repetirlo) */}
+        {/* Columna 3: Redes Sociales y Copyright */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right">
           <h3 className="font-heading text-xl font-bold mb-4">Síguenos</h3>
           <div className="flex space-x-4 mb-4">
@@ -101,17 +117,12 @@ const Footer = () => {
                 className="hover:text-albatrosRed transition-colors duration-200"
               />
             </a>
-            {/* Agrega más redes sociales si es necesario */}
           </div>
           <div className="mt-auto">
-            {" "}
-            {/* Empuja el copyright hacia abajo */}
             <p className="font-body text-sm">
               &copy; {currentYear} Grupo Cultural Albatros. Todos los derechos
               reservados.
             </p>
-            {/* Si quieres añadir una pequeña referencia al logo aquí, puedes hacerlo */}
-            {/* <img src="/logo-albatros-blanco.png" alt="Logo Albatros" className="h-8 mt-2" /> */}
           </div>
         </div>
       </div>

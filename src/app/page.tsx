@@ -29,9 +29,11 @@ const HomePage: React.FC = () => {
       <PillarsSection />
 
       <WhyUsSection />
+
       <WorkshopsSection />
-      {/* <FacilitiesSection /> */}
+
       <FaqSection />
+
     </div>
   );
 };

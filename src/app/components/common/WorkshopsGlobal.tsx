@@ -4,14 +4,10 @@
 import React from 'react';
 import CustomTabs from '@/app/components/common/Tabs'; // Importamos nuestro componente de Pestañas
 import { Bot, Dribbble, Music } from 'lucide-react'; // Iconos relevantes
-import DiagonalSeparator from '@/app/components/common/DiagonalSeparator'; // Importa el componente
 
-
-const WorkshopsSection: React.FC = () => {
+const WorkshopsGlobal: React.FC = () => {
     return (
         <section className="w-full bg-zinc-300">
-
-            <DiagonalSeparator colorClass="bg-blue-900" direction="right" height="h-12" offset="-mt-0" />
 
 
             <div className="container mx-auto py-16 px-6 md:px-12 ">
@@ -94,4 +90,4 @@ const WorkshopsSection: React.FC = () => {
     );
 };
 
-export default WorkshopsSection;
+export default WorkshopsGlobal;

@@ -58,7 +58,7 @@ const PlantelsSection: React.FC = () => {
                         logoSrc="/colegio_albatros_logo.svg"
                         levels="Preescolar y Primaria"
                         location="Plantel Zumpango Centro"
-                        offerLink="/oferta-educativa#albatros"
+                        offerLink="/oferta-educativa/albatros"
                     />
 
                     {/* Card Colegio TECNO */}
@@ -67,7 +67,7 @@ const PlantelsSection: React.FC = () => {
                         logoSrc="/colegio_tecno_logo.svg"
                         levels="Preescolar, Primaria y Secundaria"
                         location="Plantel Zumpango San Lorenzo"
-                        offerLink="/oferta-educativa#tecno"
+                        offerLink="/oferta-educativa/tecno"
                     />
                 </div>
             </div>

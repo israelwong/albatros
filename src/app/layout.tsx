@@ -23,6 +23,7 @@ export default function RootLayout({
 
       <head>
         <title>Grupo Cultural Albatros</title>
+        <meta name="facebook-domain-verification" content="xouk22brgz7vbmi3ymyfqwuev2ljvi" />
       </head>
       <body className="flex flex-col min-h-screen overflow-x-hidden">
 

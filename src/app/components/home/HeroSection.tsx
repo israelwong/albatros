@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
             {/* Contenedor de la Imagen y Overlay (lado izquierdo/superior) */}
             <div className="relative w-full md:w-1/2 h-80 md:h-auto flex-shrink-0">
                 <Image
-                    src="/images/ninos-de-vista-lateral-aprendiendo-ingles.jpg"
+                    src="/images/alumnos/9.jpg"
                     alt="Estudiantes sonriendo en Colegio Albatros"
                     layout="fill"
                     objectFit="cover"
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
 
                 {/* Mensaje principal sobre la imagen para mobile/tablet */}
                 <div className="relative z-20 text-center md:hidden text-white pt-20 pb-10 px-6 flex flex-col justify-end h-full">
-                    <h1 className="font-heading text-4xl font-extrabold leading-tight drop-shadow-md">
+                    <h1 className="font-heading text-4xl font-extrabold leading-tight drop-shadow-md font-Bhineka">
                         Para tu hijo, <br /> el mejor colegio.
                     </h1>
                     <p className="font-body text-lg opacity-90 mt-2 drop-shadow-md">
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
 
             {/* Contenido del Call to Action (lado derecho/inferior) */}
             <div className="w-full md:w-1/2 min-h-[40vh] md:min-h-[inherit] flex flex-col items-center md:items-start justify-center text-center md:text-left text-albatrosBlue p-8 md:p-12 md:py-20 flex-grow">
-                <h2 className="hidden md:block font-heading text-xl md:text-2xl font-semibold mb-4 opacity-90">
+                <h2 className="hidden md:block font-heading text-xl md:text-2xl font-semibold mb-4 opacity-90 ">
                     18 años de excelencia educativa
                 </h2>
 

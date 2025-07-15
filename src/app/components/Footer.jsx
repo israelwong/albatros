@@ -96,7 +96,7 @@ const Footer = () => {
           <h3 className="font-heading text-xl font-bold mb-4">Síguenos</h3>
           <div className="flex space-x-4 mb-4">
             <a
-              href="https://www.facebook.com/profile.php?id=61555707421272"
+              href="https://www.facebook.com/grupoculturalalbatros.oficial/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -107,7 +107,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com/colegiotecno/"
+              href="https://www.instagram.com/grupoculturalalbatros/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

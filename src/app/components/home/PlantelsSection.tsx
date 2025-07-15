@@ -55,7 +55,7 @@ const PlantelsSection: React.FC = () => {
                     {/* Card Colegio Albatros */}
                     <PlantelCard
                         name="Colegio ALBATROS"
-                        logoSrc="/colegio_albatros_logo.svg"
+                        logoSrc="/logo_albatros.svg"
                         levels="Preescolar y Primaria"
                         location="Plantel Zumpango Centro"
                         offerLink="/oferta-educativa/albatros"
@@ -64,7 +64,7 @@ const PlantelsSection: React.FC = () => {
                     {/* Card Colegio TECNO */}
                     <PlantelCard
                         name="Colegio TECNO"
-                        logoSrc="/colegio_tecno_logo.svg"
+                        logoSrc="/logo_tecno.svg"
                         levels="Preescolar, Primaria y Secundaria"
                         location="Plantel Zumpango San Lorenzo"
                         offerLink="/oferta-educativa/tecno"

@@ -18,8 +18,8 @@ module.exports = {
         tecnoLightPurple: "#9361CE", // Un tono más claro para acentos si es necesario
       },
       fontFamily: {
-        heading: ["Montserrat", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        bhineka: ["Bhineka", "sans-serif"],
+        figtree: ["Figtree", "sans-serif"],
       },
       keyframes: {
         fadeIn: {

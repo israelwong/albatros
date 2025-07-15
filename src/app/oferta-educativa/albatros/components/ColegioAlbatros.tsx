@@ -30,11 +30,11 @@ const albatrosContactData = {
 };
 
 const AlbatrosCulturalPage: React.FC = () => {
-    const mensualidadAlbatrosKinder1 = "$1,590.00 MXN";
-    const mensualidadAlbatrosKinder2_3 = "$1,766.00 MXN";
-    const mensualidadAlbatrosPrimaria1 = "$2,264.00 MXN";
-    const mensualidadAlbatrosPrimaria2 = "$2,390.00 MXN";
-    const mensualidadAlbatrosPrimaria3_6 = "$2,516.00 MXN";
+    // const mensualidadAlbatrosKinder1 = "$1,590.00 MXN";
+    // const mensualidadAlbatrosKinder2_3 = "$1,766.00 MXN";
+    // const mensualidadAlbatrosPrimaria1 = "$2,264.00 MXN";
+    // const mensualidadAlbatrosPrimaria2 = "$2,390.00 MXN";
+    // const mensualidadAlbatrosPrimaria3_6 = "$2,516.00 MXN";
     const pathname = usePathname();
     const currentWhatsappContext = getWhatsappContext(pathname);
 
@@ -44,7 +44,7 @@ const AlbatrosCulturalPage: React.FC = () => {
             <section className="relative w-full py-12 px-6 md:px-12 bg-albatrosBlue text-albatrosWhite text-center">
                 <div className="container mx-auto max-w-4xl">
                     <Image
-                        src="/colegio_albatros_logo.svg"
+                        src="/logo_albatros.svg"
                         alt="Logo Albatros Grupo Cultural"
                         width={180}
                         height={180}
@@ -71,7 +71,7 @@ const AlbatrosCulturalPage: React.FC = () => {
                             <h3 className="font-heading text-2xl font-bold mb-3">Kinder</h3>
                             <p className="font-body text-gray-700 mb-4">Preescolar de 1º a 3º grado. Desarrollamos la creatividad y las bases para el aprendizaje en un ambiente cálido.</p>
                             <div className="w-full">
-                                <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
+                                {/* <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
                                 <div className="overflow-x-auto mb-4">
                                     <table className="min-w-full text-sm mx-auto">
                                         <tbody>
@@ -85,7 +85,7 @@ const AlbatrosCulturalPage: React.FC = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div> */}
                                 <Button
                                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleWhatsappClickWithContext(e, currentWhatsappContext, 'inscripcion')}
                                     variant="blue"
@@ -102,7 +102,7 @@ const AlbatrosCulturalPage: React.FC = () => {
                             <h3 className="font-heading text-2xl font-bold mb-3">Primaria</h3>
                             <p className="font-body text-gray-700 mb-4">De 1º a 6º grado. Fomentamos el pensamiento crítico, la autonomía y el desarrollo integral de cada estudiante.</p>
                             <div className="w-full">
-                                <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
+                                {/* <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
                                 <div className="overflow-x-auto mb-4">
                                     <table className="min-w-full text-sm mx-auto">
                                         <tbody>
@@ -120,7 +120,7 @@ const AlbatrosCulturalPage: React.FC = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div> */}
                                 <Button
                                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleWhatsappClickWithContext(e, currentWhatsappContext, 'inscripcion')}
                                     variant="blue"

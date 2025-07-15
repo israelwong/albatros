@@ -9,7 +9,7 @@ const FaqSection: React.FC = () => {
     const faqItems: AccordionItemProps[] = [
         {
             value: 'faq-1',
-            trigger: '¿Qué es el Grupo Cultural Tecno Albatros?',
+            trigger: '¿Qué es el Grupo Cultural Albatros?',
             children: (
                 <p className="font-body text-zinc-700 leading-relaxed">
                     Somos un grupo educativo con una filosofía, misión, visión, modelo educativo y servicios compartidos. Contamos con 18 años de experiencia educativa consolidada, con Colegio Tecno y Colegio Albatros.
@@ -27,7 +27,7 @@ const FaqSection: React.FC = () => {
                             <strong>Colegio Tecno:</strong> Ubicado en San Lorenzo, Zumpango.
                         </li>
                         <li>
-                            <strong>Albatros Grupo Cultural:</strong> Ubicado en el Centro de Zumpango.
+                            <strong>Colegio Albatros:</strong> Ubicado en el Centro de Zumpango.
                         </li>
                     </ul>
                 </p>

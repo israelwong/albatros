@@ -124,6 +124,9 @@ const FaqSection: React.FC = () => {
                     collapsible={true}
                     items={faqItems}
                 />
+
+                <a href="fb://page/198588873346459/reviews/">¡Deja una reseña en la app de Facebook!</a>
+
             </div>
         </section>
     );

@@ -42,18 +42,18 @@ const OfertaEducativaPage: React.FC = () => {
                         {/* Tarjeta Colegio Albatros */}
                         <div className="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center border-t-4 border-albatrosBlue transform transition-transform duration-300 hover:scale-[1.02]">
                             <Image
-                                src="/colegio_albatros_logo.svg"
+                                src="/logo_albatros.svg"
                                 alt="Logo Colegio Albatros"
                                 width={150}
                                 height={150}
                                 className="mb-6 mx-auto object-contain"
                             />
-                            <h2 className="font-heading text-3xl font-bold mb-4">Colegio Albatros</h2>
+                            {/* <h2 className="font-heading text-3xl font-bold mb-4">Colegio Albatros</h2> */}
                             <p className="font-body text-gray-700 leading-relaxed mb-6 flex-grow">
-                                Ubicado en el Centro de Zumpango, ofrece los niveles de **Kinder y Primaria**, con 18 años de experiencia. Destaca por su enfoque en el desarrollo integral y excelencia académica.
+                                Kinder y Primaria
                             </p>
                             {/* Tabla sencilla de Colegiaturas desde */}
-                            <div className="bg-gray-50 rounded-lg p-4 mb-6 w-full text-left">
+                            {/* <div className="bg-gray-50 rounded-lg p-4 mb-6 w-full text-left">
                                 <p className="font-body text-albatrosBlue text-lg font-bold mb-2 text-center">
                                     Colegiaturas desde:
                                 </p>
@@ -71,7 +71,7 @@ const OfertaEducativaPage: React.FC = () => {
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div> */}
                             <Button asChild variant="blue" size="md" className="mt-auto">
                                 <Link href="/oferta-educativa/albatros">
                                     Consultar Detalles
@@ -82,18 +82,18 @@ const OfertaEducativaPage: React.FC = () => {
                         {/* Tarjeta Colegio Tecno */}
                         <div className="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center border-t-4 border-albatrosRed transform transition-transform duration-300 hover:scale-[1.02]">
                             <Image
-                                src="/colegio_tecno_logo.svg"
+                                src="/logo_tecno.svg"
                                 alt="Logo Colegio Tecno"
-                                width={150}
-                                height={150}
+                                width={210}
+                                height={210}
                                 className="mb-6 mx-auto object-contain"
                             />
-                            <h2 className="font-heading text-3xl font-bold mb-4">Colegio Tecno</h2>
+                            {/* <h2 className="font-heading text-3xl font-bold mb-4">Colegio Tecno</h2> */}
                             <p className="font-body text-gray-700 leading-relaxed mb-6 flex-grow">
-                                Situado en San Lorenzo, Zumpango, este plantel cubre **Kinder, Primaria y Secundaria**, con un fuerte énfasis en tecnología de vanguardia y una alberca propia.
+                                Kinder, Primaria y Secundaria
                             </p>
                             {/* Tabla sencilla de Colegiaturas desde */}
-                            <div className="bg-gray-50 rounded-lg p-4 mb-6 w-full text-left">
+                            {/* <div className="bg-gray-50 rounded-lg p-4 mb-6 w-full text-left">
                                 <p className="font-body text-albatrosBlue text-lg font-bold mb-2 text-center">
                                     Colegiaturas desde:
                                 </p>
@@ -115,7 +115,7 @@ const OfertaEducativaPage: React.FC = () => {
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div> */}
                             <Button asChild variant="red" size="md" className="mt-auto">
                                 <Link href="/oferta-educativa/tecno">
                                     Consultar Detalles

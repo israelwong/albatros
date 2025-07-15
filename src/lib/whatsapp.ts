@@ -3,7 +3,7 @@
 
 // 1. Número de WhatsApp Global del Grupo Cultural Albatros
 // ¡IMPORTANTE! Reemplaza este número con el número real de WhatsApp del cliente.
-const WHATSAPP_NUMBER_GLOBAL = "+525617015459"; // Ejemplo: Formato con código de país.
+const WHATSAPP_NUMBER_GLOBAL = "+15557601444"; // Ejemplo: Formato con código de país.
 
 // 2. Mensajes preconstruidos CENTRALIZADOS por contexto y tipo de acción.
 type MessagesConfigType = Record<WhatsappContextType, Record<WhatsappActionType, string>>;

@@ -39,10 +39,10 @@ const tecnoContactData = {
 
 const ColegioTecnoPage: React.FC = () => {
     // Datos de colegiaturas específicas para Tecno
-    const mensualidadTecnoKinder1_3 = "$2,516.00 MXN"; // Kinder 1°-3°
-    const mensualidadTecnoPrimaria1 = "$3,005.00 MXN"; // Primaria 1°
-    const mensualidadTecnoPrimaria2_6 = "$3,164.00 MXN"; // Primaria 2°-6°
-    const mensualidadTecnoSecundaria = "$3,278.00 MXN"; // Secundaria 1°-3°
+    // const mensualidadTecnoKinder1_3 = "$2,516.00 MXN"; // Kinder 1°-3°
+    // const mensualidadTecnoPrimaria1 = "$3,005.00 MXN"; // Primaria 1°
+    // const mensualidadTecnoPrimaria2_6 = "$3,164.00 MXN"; // Primaria 2°-6°
+    // const mensualidadTecnoSecundaria = "$3,278.00 MXN"; // Secundaria 1°-3°
 
     const pathname = usePathname();
     const currentWhatsappContext = getWhatsappContext(pathname);
@@ -55,21 +55,20 @@ const ColegioTecnoPage: React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             {/* Sección Intro / Hero de Colegio Tecno */}
-            <section className="relative w-full py-16 px-6 md:px-12 text-center" style={{ backgroundColor: tecnoPurpleHex, color: '#FFFFFF' }}> {/* Fondo Morado de Tecno */}
+            <section className="relative w-full py-6 px-6 md:px-12 text-center"> {/* Fondo Morado de Tecno */}
                 <div className="container mx-auto max-w-4xl">
                     <div
                         className="mb-6 mx-auto drop-shadow-md"
                         style={{
                             width: 300,
                             height: 300,
-                            filter: "invert(1) brightness(1000%)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                         }}
                     >
                         <Image
-                            src="/colegio_tecno_logo.svg"
+                            src="/logo_tecno.svg"
                             alt="Logo Colegio Tecno"
                             width={180}
                             height={180}
@@ -93,7 +92,7 @@ const ColegioTecnoPage: React.FC = () => {
                         <div className="bg-gray-50 p-6 rounded-lg text-center shadow-sm flex flex-col items-center border-t-4" style={{ borderColor: tecnoPurpleHex }}> {/* Borde Morado */}
                             <h3 className="font-heading text-2xl font-bold mb-3">Kinder</h3>
                             <p className="font-body text-gray-700 mb-4">Preescolar de 1º a 3º grado. Desarrollamos la creatividad y las bases para el aprendizaje.</p>
-                            <div className="w-full">
+                            {/* <div className="w-full">
                                 <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
                                 <div className="overflow-x-auto mb-4">
                                     <table className="min-w-full text-sm mx-auto">
@@ -106,14 +105,14 @@ const ColegioTecnoPage: React.FC = () => {
                                     </table>
                                 </div>
                                 <p className="font-body text-gray-700 text-xs mt-2">*Precios varían según paquete de servicios.</p>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Card Primaria */}
                         <div className="bg-gray-50 p-6 rounded-lg text-center shadow-sm flex flex-col items-center border-t-4" style={{ borderColor: tecnoPurpleHex }}> {/* Borde Morado */}
                             <h3 className="font-heading text-2xl font-bold mb-3">Primaria</h3>
                             <p className="font-body text-gray-700 mb-4">De 1º a 6º grado. Fomentamos el pensamiento crítico y la autonomía en un ambiente de aprendizaje activo.</p>
-                            <div className="w-full">
+                            {/* <div className="w-full">
                                 <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
                                 <div className="overflow-x-auto mb-4">
                                     <table className="min-w-full text-sm mx-auto">
@@ -130,15 +129,14 @@ const ColegioTecnoPage: React.FC = () => {
                                     </table>
                                 </div>
                                 <p className="font-body text-gray-700 text-xs mt-2">*Precios varían según paquete de servicios.</p>
-
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Card Secundaria */}
                         <div className="bg-gray-50 p-6 rounded-lg text-center shadow-sm flex flex-col items-center border-t-4" style={{ borderColor: tecnoPurpleHex }}> {/* Borde Morado */}
                             <h3 className="font-heading text-2xl font-bold mb-3">Secundaria</h3>
                             <p className="font-body text-gray-700 mb-4">De 1º a 3º grado. Preparamos a nuestros alumnos para los retos académicos y personales del futuro.</p>
-                            <div className="w-full">
+                            {/* <div className="w-full">
                                 <p className="font-body text-albatrosBlue text-lg font-bold mb-2">Colegiatura desde:</p>
                                 <div className="overflow-x-auto mb-4">
                                     <table className="min-w-full text-sm mx-auto">
@@ -152,7 +150,7 @@ const ColegioTecnoPage: React.FC = () => {
                                 </div>
                                 <p className="font-body text-gray-700 text-xs mt-2">*Precios varían según paquete de servicios.</p>
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

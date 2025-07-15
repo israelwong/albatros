@@ -10,8 +10,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   // Actualiza con los números y emails reales
-  const contactPhone = "55 1701 5459"; // Número de Colegio Tecno que proporcionaste
-  const contactEmail = "colegiotecnoz@gmail.com";
+  const contactPhone = "5592774670"; // Número de Colegio Tecno que proporcionaste
+  const contactEmail = "gca.colegio.tecno@gmail.com";
 
   return (
     <footer className="bg-albatrosBlue text-albatrosWhite py-8 px-6 md:px-12">

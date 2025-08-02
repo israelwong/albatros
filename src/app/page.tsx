@@ -1,42 +1,45 @@
 // src/app/page.tsx
 import React from 'react';
-
 import HeroSection from '@/app/components/home/HeroSection';
-import PlantelsSection from '@/app/components/home/PlantelsSection';
-import AchievementsTabsSection from '@/app/components/home/AchievementsTabsSection';
-// import UniqueValueSection from '@/app/components/home/UniqueValueSection';
-import PillarsSection from '@/app/components/home/PillarsSection';
-import WhyUsSection from '@/app/components/home/WhyUsSection';
-import WorkshopsSection from '@/app/components/home/WorkshopsSection';
-// import FacilitiesSection from '@/app/components/home/FacilitiesSection';
-import FaqSection from '@/app/components/home/FaqSection';
-
-// Puedes agregar metadatos específicos para la página Home aquí (solo en App Router)
-export const metadata = {
-  title: 'Bienvenido | Grupo Cultural Albatros',
-  description: 'Descubre la excelencia educativa del Grupo Cultural Albatros. Preescolar, Primaria y Secundaria de vanguardia.',
-};
+import OpportunitiesCarousel from '@/app/components/home/OpportunitiesCarousel';
+import ExcellenceProof from '@/app/components/home/ExcellenceProof';
+import QualitySeal from './components/home/QualitySeal';
+import Testimonials from './components/home/Testimonials';
+import CallToAction from './components/home/CallToAction';
+import OfferingsTags from './components/home/OfferingsTags';
+import Gallery from './components/Gallery';
+import FAQ from './components/home/FAQ';
+import ImmersiveSeparator from './components/home/ImmersiveSeparator';
+import AchievementsTabsSection from './components/home/AchievementsTabsSection';
+import CoreValuesSection from './components/home/CoreValuesSection';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center">
+    <>
       <HeroSection />
-      <PlantelsSection />
-
-      {/* <UniqueValueSection /> */}
+      <ExcellenceProof />
       <AchievementsTabsSection />
 
-      <PillarsSection />
+      <OpportunitiesCarousel />
+      <OfferingsTags />
 
-      <WhyUsSection />
+      <ImmersiveSeparator
+        videoSrc="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/videos/Reel%20Hero%20web.mp4" // <-- Necesitarás un video corto aquí
+        quote="Aquí es donde nacen los recuerdos que duran toda la vida."
+        heightClass="h-[80vh]"
+      />
 
-      <WorkshopsSection />
-
-      <FaqSection />
-
-    </div>
+      <CoreValuesSection />
+      <QualitySeal />
+      <Testimonials />
+      <ImmersiveSeparator
+        backgroundImage="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/alumnos/23.jpg" // Una toma con dron de las instalaciones
+        quote="Aquí es donde nacen los recuerdos que duran toda la vida."
+      />
+      <Gallery />
+      <CallToAction />
+      <FAQ />
+    </>
   );
 };
-
 export default HomePage;
-

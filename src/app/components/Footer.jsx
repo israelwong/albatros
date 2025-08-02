@@ -1,129 +1,184 @@
-// src/app/components/Footer.jsx
-"use client"; // Necesario para usar handleCallClick con onClick
+"use client";
 
 import React from "react";
 import Link from "next/link";
-import { Facebook, Instagram, Phone, Mail } from "lucide-react"; // Íconos para redes sociales y contacto
-import { handleCallClick } from "@/lib/phone"; // Importa el helper para llamadas
+import Image from "next/image";
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { handleCallClick } from "@/lib/phone";
+
+// --- Datos de Contacto (extraídos del brochure) ---
+const tecnoInfo = {
+  phone: "5592774670",
+  email: "gca.colegio.tecno@gmail.com",
+  address:
+    "Segunda Cerrada de Chamizal N° 17, San Lorenzo, Zumpango, Estado de México.",
+};
+
+const albatrosInfo = {
+  phone: "5919170999",
+  email: "gca.colegio.albatros@gmail.com",
+  address:
+    "Federico Gómez 32, Santiago 2.ª Sección, Zumpango, Estado de México.",
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Actualiza con los números y emails reales
-  const contactPhone = "5592774670"; // Número de Colegio Tecno que proporcionaste
-  const contactEmail = "gca.colegio.tecno@gmail.com";
-
   return (
-    <footer className="bg-albatrosBlue text-albatrosWhite py-8 px-6 md:px-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Columna 1: Información de Contacto */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="font-heading text-xl font-bold mb-4">Contacto</h3>
-          <p className="font-body mb-2 flex items-center">
-            <Phone size={18} className="mr-2" />
-            {/* Usamos un botón invisible o un span clickeable para el onClick */}
-            <span
-              className="cursor-pointer hover:text-albatrosRed transition-colors duration-200"
-              onClick={(e) => handleCallClick(e, contactPhone)}
-              aria-label={`Llamar a ${contactPhone}`}
-            >
-              {contactPhone}
-            </span>
-          </p>
-          <p className="font-body mb-2 flex items-center">
-            <Mail size={18} className="mr-2" />
-            <a
-              href={`mailto:${contactEmail}`}
-              className="hover:text-albatrosRed transition-colors duration-200"
-            >
-              {contactEmail}
-            </a>
-          </p>
-          <p className="font-body text-sm mt-4">
-            Horario de atención: Lunes a Viernes de 8:00 a 16:00 hrs.
-          </p>
+    <footer className="bg-primary text-white/80 font-sans">
+      <div className="container mx-auto px-6 pt-16 pb-12">
+        {/* --- Sección Superior con Logo --- */}
+        <div className="mb-12 text-center md:text-left">
+          <Link href="/">
+            <Image
+              src="/gca_isotipo_white.svg"
+              alt="Isotipo Grupo Cultural Albatros"
+              width={70}
+              height={70}
+              className="inline-block"
+            />
+          </Link>
         </div>
 
-        {/* Columna 2: Navegación Rápida */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="font-heading text-xl font-bold mb-4">Navegación</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/"
-                className="font-body hover:text-albatrosRed transition-colors duration-200"
+        {/* --- Grid Principal de 4 Columnas --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Columna 1: Colegio Tecno */}
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg text-white mb-3">Colegio Tecno</h3>
+            <p className="flex items-start gap-3">
+              <MapPin size={20} className="mt-1 flex-shrink-0 text-secondary" />
+              <span>{tecnoInfo.address}</span>
+            </p>
+            <p className="flex items-center gap-3">
+              <Phone size={18} className="flex-shrink-0 text-secondary" />
+              <span
+                onClick={(e) => handleCallClick(e, tecnoInfo.phone)}
+                className="cursor-pointer hover:text-secondary transition-colors"
               >
-                Principal
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/nosotros"
-                className="font-body hover:text-albatrosRed transition-colors duration-200"
+                {tecnoInfo.phone}
+              </span>
+            </p>
+            <p className="flex items-center gap-3">
+              <Mail size={18} className="flex-shrink-0 text-secondary" />
+              <a
+                href={`mailto:${tecnoInfo.email}`}
+                className="hover:text-secondary transition-colors break-all"
               >
-                Nosotros
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/oferta-educativa"
-                className="font-body hover:text-albatrosRed transition-colors duration-200"
-              >
-                Oferta Educativa
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contacto"
-                className="font-body hover:text-albatrosRed transition-colors duration-200"
-              >
-                Contacto
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/privacidad"
-                className="font-body hover:text-albatrosRed transition-colors duration-200"
-              >
-                Aviso de Privacidad
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Columna 3: Redes Sociales y Copyright */}
-        <div className="flex flex-col items-center md:items-end text-center md:text-right">
-          <h3 className="font-heading text-xl font-bold mb-4">Síguenos</h3>
-          <div className="flex space-x-4 mb-4">
-            <a
-              href="https://www.facebook.com/grupoculturalalbatros.oficial/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <Facebook
-                size={28}
-                className="hover:text-albatrosRed transition-colors duration-200"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/grupoculturalalbatros/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <Instagram
-                size={28}
-                className="hover:text-albatrosRed transition-colors duration-200"
-              />
-            </a>
-          </div>
-          <div className="mt-auto">
-            <p className="font-body text-sm">
-              &copy; {currentYear} Grupo Cultural Albatros. Todos los derechos
-              reservados.
+                {tecnoInfo.email}
+              </a>
             </p>
           </div>
+
+          {/* Columna 2: Colegio Albatros */}
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg text-white mb-3">
+              Colegio Albatros
+            </h3>
+            <p className="flex items-start gap-3">
+              <MapPin size={20} className="mt-1 flex-shrink-0 text-secondary" />
+              <span>{albatrosInfo.address}</span>
+            </p>
+            <p className="flex items-center gap-3">
+              <Phone size={18} className="flex-shrink-0 text-secondary" />
+              <span
+                onClick={(e) => handleCallClick(e, albatrosInfo.phone)}
+                className="cursor-pointer hover:text-secondary transition-colors"
+              >
+                {albatrosInfo.phone}
+              </span>
+            </p>
+            <p className="flex items-center gap-3">
+              <Mail size={18} className="flex-shrink-0 text-secondary" />
+              <a
+                href={`mailto:${albatrosInfo.email}`}
+                className="hover:text-secondary transition-colors break-all"
+              >
+                {albatrosInfo.email}
+              </a>
+            </p>
+          </div>
+
+          {/* Columna 3: Navegación */}
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg text-white mb-3">Navegación</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/modelo-educativo"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Modelo Educativo
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/planteles"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Planteles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/admisiones"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Admisiones
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/nosotros"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Quiénes Somos
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 4: Redes Sociales */}
+          <div className="space-y-4">
+            <h3 className="font-bold text-lg text-white mb-3">Síguenos</h3>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.facebook.com/grupoculturalalbatros.oficial/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <Facebook
+                  size={28}
+                  className="hover:text-secondary transition-colors"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/grupoculturalalbatros/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Instagram
+                  size={28}
+                  className="hover:text-secondary transition-colors"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* --- Barra Inferior de Copyright --- */}
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+          <p>
+            &copy; {currentYear} Grupo Cultural Albatros. Todos los derechos
+            reservados.
+          </p>
+          <Link
+            href="/aviso-de-privacidad"
+            className="hover:text-secondary transition-colors mt-4 md:mt-0"
+          >
+            Aviso de Privacidad
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,12 +1,24 @@
 import React from 'react'
 import { Metadata } from 'next'
+import AboutHero from './components/Hero'
+import DirectorMessage from './components/DirectorMessage'
+import PhilosophySection from './components/PhilosophySection'
+import HistorySection from './components/HistorySection'
+import DirectorsGrid from './components/DirectorsGrid';
 
 export const metadata: Metadata = {
     title: 'Nosotros | Grupo Cultural Albatros',
-    description: 'Conoce la historia, misión, visión y política de calidad del Grupo Cultural Albatros, líderes en educación de vanguardia en Zumpango.',
+    description: 'Conoce más sobre nuestra misión, visión y el equipo que hace posible la educación integral en Grupo Cultural Albatros.',
 }
 
-import NosotrosPage from './components/Nosotros'
 export default function page() {
-    return <NosotrosPage />
+    return (
+        <div>
+            <AboutHero />
+            <DirectorMessage />
+            <PhilosophySection />
+            <HistorySection />
+            <DirectorsGrid />
+        </div>
+    )
 }

@@ -1,13 +1,22 @@
 /* src/app/globals.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap");
-@import "tailwindcss";
+@font-face {
+  font-family: "Bhineka";
+  src: url("/fonts/Bhineka.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
-/*
-  Puedes dejar las variables de color si las usas en otras partes
-  que no sean componentes de React con Tailwind, pero para los fondos y
-  textos principales de los componentes de React, usa las clases de Tailwind.
-*/
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&family=Qwigley&display=swap");
+
+/* --- ESTA ES LA PARTE A CORREGIR --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------- */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,132 +32,3 @@
 html {
   overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
 }
-
-/* src/app/globals.css */
-
-/* --- FUENTES AUTOALOJADAS --- */
-
-/* Fuente: Bhineka */
-@font-face {
-  font-family: "Bhineka";
-  src: url("/fonts/Bhineka.otf") format("opentype");
-  font-weight: 400; /* Asumiendo que es regular */
-  font-style: normal;
-  font-display: swap; /* Estrategia de carga para evitar FOIT */
-}
-
-/* Fuente: Figtree */
-/* Regular */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-/* Regular Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-/* Light */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-/* Light Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-/* Medium */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-/* Medium Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-/* SemiBold */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-/* SemiBold Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-/* Bold */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/* Bold Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-/* ExtraBold */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-/* ExtraBold Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-/* Black */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-/* Black Italic */
-@font-face {
-  font-family: "Figtree";
-  src: url("/fonts/Figtree-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* --- FIN FUENTES AUTOALOJADAS --- */

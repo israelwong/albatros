@@ -24,7 +24,7 @@ const opportunities = [
     {
         title: "Clases de Natación",
         description: "Alberca climatizada.",
-        imageUrl: "https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/Arquitectura/20.jpg"
+        imageUrl: "https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/arquitectura/20.jpg"
     },
 ];
 

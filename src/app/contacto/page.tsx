@@ -1,13 +1,20 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
+import ContactHero from './components/ContactHero';
+import ContactInfoSection from './components/ContactInfoSection';
 
-export const metadata: Metadata = {
-    title: 'Contacto',
-    description: 'Página de contacto para consultas y soporte',
-}
+// Metadata para la página
+export const metadata = {
+    title: 'Contacto | Grupo Cultural Albatros',
+    description: 'Comunícate con nosotros. Encuentra las direcciones, teléfonos y correos de nuestros planteles Albatros y Tecno.',
+};
 
-import ContactoPage from './components/Contacto';
+const ContactoPage = () => {
+    return (
+        <main>
+            <ContactHero />
+            <ContactInfoSection />
+        </main>
+    );
+};
 
-export default function page() {
-    return <ContactoPage />
-}
+export default ContactoPage;

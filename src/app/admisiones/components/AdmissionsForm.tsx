@@ -162,17 +162,26 @@ const AdmissionsForm = () => {
         setFormStatus('loading');
         setApiError('');
 
-        // CORREGIDO: Ya no formateamos la fecha. Enviamos el ISO string directamente.
+        // --- AJUSTE DEFINITIVO: Formateamos la fecha al formato exacto de ManyChat ---
+        const dateToFormat = new Date(formData.fechaHoraCita);
+        const formattedDate = new Intl.DateTimeFormat('en-US', {
+            year: '2-digit',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
+            timeZone: 'America/Mexico_City', // Zona horaria clave
+        }).format(dateToFormat).replace(',', '') + " CST";
+
         const payload = {
             ...formData,
-            // El campo 'fechaHoraCita' ya contiene el ISO string correcto.
+            fechaHoraCita: formattedDate, // Usamos la fecha formateada
             tipoDeCitaId: currentTipoCita?.id || 'clxilh37e000108l430f7326p',
             negocioId: 'clv8d2k6q000008l41x2f1vxf',
             ofertaId: currentOferta?.id || 'clxilh37e000008l40a7p784n',
             source: 'Formulario Web Admisiones'
         };
-
-        console.log("Enviando datos al servidor:", payload);
 
         try {
             const response = await fetch('/api/appointments/create', {

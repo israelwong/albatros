@@ -36,7 +36,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         <MobileContactButtons
-          phoneNumber="525617015459"
+          phoneNumber="5561155122"
         />
         <Footer />
       </body>

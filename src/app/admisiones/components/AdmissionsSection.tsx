@@ -1,5 +1,6 @@
 import React from 'react';
-import AdmissionsForm from './AdmissionsForm';
+// import AdmissionsForm from './AdmissionsForm';
+import AdmissionsCTA from './AdmissionsCTA';
 import AdmissionsInfo from './AdmissionsInfo';
 
 const AdmissionsSection = () => {
@@ -9,7 +10,7 @@ const AdmissionsSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Columna del Formulario */}
                     <div>
-                        <AdmissionsForm />
+                        <AdmissionsCTA />
                     </div>
                     {/* Columna de Información */}
                     <div>

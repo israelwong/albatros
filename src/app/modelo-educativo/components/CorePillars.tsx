@@ -7,7 +7,7 @@ const pillarsData = [
         eyebrow: "FORMACIÓN GLOBAL",
         title: "Inglés de Nivel Internacional",
         description: "Preparamos a nuestros alumnos para un mundo globalizado a través de un programa de inglés de alto nivel, validado por las certificaciones de Cambridge.",
-        activities: ["Certificaciones Cambridge", "Programa bilingüe certificado"],
+        activities: ["Certificación Cambridge", "Certificación Oxford"],
         imageUrl: "https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/alumnos/29.jpg",
     },
     {

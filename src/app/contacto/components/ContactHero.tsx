@@ -6,7 +6,7 @@ const ContactHero = () => {
         <section className="relative h-[50vh] flex flex-col justify-center items-center text-white text-center">
             {/* Imagen de Fondo */}
             <Image
-                src="/images/contacto/hero.jpg" // Reemplaza esta imagen
+                src="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/arquitectura/8.jpg" // Reemplaza esta imagen
                 alt="Contacto Grupo Cultural Albatros"
                 fill
                 className="object-cover z-0"

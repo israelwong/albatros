@@ -28,7 +28,7 @@ const WhatsAppIcon = () => (
 
 
 const tecnoInfo = {
-    phone: "5617015459",
+    phone: "5561155122",
     whatsapp: "5561155122",
     email: "gca.colegio.tecno@gmail.com",
     address: "Segunda Cerrada de Chamizal N° 17, San Lorenzo, Zumpango, Estado de México.",

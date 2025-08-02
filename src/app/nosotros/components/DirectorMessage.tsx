@@ -21,14 +21,14 @@ const DirectorMessage = () => {
                         </h2>
                         <div className="space-y-4 text-brand-text-light text-lg leading-relaxed">
                             <p>
-                                &quot;Con gran orgullo y compromiso, les doy la bienvenida a Grupo Cultural Albatros. Durante 18 años, nuestra misión ha sido clara: formar no solo a excelentes estudiantes, sino a seres humanos íntegros, creativos y preparados para liderar el futuro.&quot;
+                                Con gran orgullo y compromiso, les doy la bienvenida a Grupo Cultural Albatros. Durante 18 años, nuestra misión ha sido clara: formar no solo a excelentes estudiantes, sino a seres humanos íntegros, creativos y preparados para liderar el futuro.
                             </p>
                             <p>
                                 &quot;Cada día, nuestro equipo de profesionales dedicados trabaja para crear un ambiente seguro y estimulante donde sus hijos puedan descubrir su máximo potencial. Gracias por confiar en nosotros para esta etapa tan importante.&quot;
                             </p>
                         </div>
                         <div className="mt-8">
-                            <p className="font-bold text-primary text-xl">[Nombre de la Directora Administrativa]</p>
+                            <p className="font-bold text-primary text-xl">Miss Sandy</p>
                             <p className="text-brand-text-light">Directora Administrativa</p>
                         </div>
                     </div>

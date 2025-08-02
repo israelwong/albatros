@@ -6,7 +6,7 @@ const PlantelesHero = () => {
         <section className="relative h-[60vh] flex flex-col justify-center items-center text-white text-center">
             {/* Imagen de Fondo */}
             <Image
-                src="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/arquitectura/cta-background.jpg" // Reemplaza esta imagen con tu foto seleccionada
+                src="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/arquitectura/28.jpg" // Reemplaza esta imagen con tu foto seleccionada
                 alt="Instalaciones de Grupo Cultural Albatros"
                 fill
                 className="object-cover z-0"

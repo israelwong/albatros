@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
       <OfferingsTags />
 
       <ImmersiveSeparator
-        videoSrc="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/videos/Reel%20Hero%20web.mp4" // <-- Necesitarás un video corto aquí
+        videoSrc="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/videos/Web%20inmersive%20section.mp4" // <-- Necesitarás un video corto aquí
         quote="Aquí es donde nacen los recuerdos que duran toda la vida."
         heightClass="h-[80vh]"
       />
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
       <Testimonials />
       <ImmersiveSeparator
         backgroundImage="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/alumnos/23.jpg" // Una toma con dron de las instalaciones
-        quote="Aquí es donde nacen los recuerdos que duran toda la vida."
+        quote="Un espacio para crecer y aprender."
       />
       <Gallery />
       <CallToAction />

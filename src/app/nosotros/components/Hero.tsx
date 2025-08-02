@@ -17,7 +17,7 @@ const AboutHero = () => {
 
             {/* Contenido de Texto */}
             <div className="relative z-20 p-6 container mx-auto">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-fade-in">
+                <h1 className="text-3xl md:text-6xl font-bold leading-tight animate-fade-in">
                     No solo educamos mentes, también preparamos corazones
                 </h1>
             </div>

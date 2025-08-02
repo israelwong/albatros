@@ -6,7 +6,7 @@ import 'yet-another-react-lightbox/plugins/captions.css';
 
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-import MobileContactButtons from '@/app/components/common/MobileContactButtons';
+import MobileContactButtons from '@/app/components/MobileContactButtons';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 

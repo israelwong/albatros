@@ -12,7 +12,7 @@ const HeroSection = () => {
                     playsInline
                     className="w-full h-full object-cover"
                 >
-                    <source src="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros//reel.mp4" type="video/mp4" />
+                    <source src="https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/videos/Web%20hero%20section.mp4" type="video/mp4" />
                     Tu navegador no soporta el tag de video.
                 </video>
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>

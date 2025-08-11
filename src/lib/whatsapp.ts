@@ -5,7 +5,7 @@ import React from 'react';
 
 // 1. Números de WhatsApp por Plantel
 const WHATSAPP_NUMBERS = {
-    albatros: "5215585980923", // Número de Albatros
+    albatros: "5215645489321", // Número de Albatros
     tecno: "5561155122",    // Número de Tecno
     general: "5561155122"   // Un número de fallback o general
 };

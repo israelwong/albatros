@@ -43,7 +43,7 @@ const albatrosData: CampusData = {
     description: "Con 18 años de historia, nuestro plantel en el corazón de Zumpango es el pilar de nuestra tradición en excelencia educativa. Actualmente en un proceso de modernización para servir mejor a nuestras familias.",
     address: "Federico Gómez 32, Santiago 2.ª Sección. C.P. 55600, Zumpango, Estado de México.",
     phone: "5919170999",
-    whatsapp: "5585980923",
+    whatsapp: "5645489321",
     email: "gca.colegio.albatros@gmail.com",
     googleMapsUrl: "https://www.google.com/maps/place/Grupo+Cultural+Albatros/@19.7918836,-99.1023795,17z/data=!3m1!4b1!4m6!3m5!1s0x85d18d179657b297:0xfb6932a392e21b06!8m2!3d19.7918836!4d-99.0998046!16s%2Fg%2F1tdy018t?hl=es-419&entry=ttu",
     googleMapsLink: "https://maps.app.goo.gl/sWVFJYMf5PBfmu886",

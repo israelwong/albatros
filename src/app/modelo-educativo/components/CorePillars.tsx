@@ -23,14 +23,7 @@ const pillarsData = [
         description: "Fomentamos la disciplina, el trabajo en equipo y un estilo de vida saludable a través de diversas actividades deportivas que complementan la formación académica.",
         activities: ["Natación en Alberca Climatizada", "Fútbol", "Básquetbol"],
         imageUrl: "https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/alumnos/34.jpg",
-    },
-    // {
-    //     eyebrow: "EXPRESIÓN Y CREATIVIDAD",
-    //     title: "Arte y Cultura",
-    //     description: "Creemos en la importancia de desarrollar la sensibilidad y el talento. Nuestros talleres artísticos ofrecen un espacio para la expresión y la creatividad.",
-    //     activities: ["Danza", "Dibujo"],
-    //     imageUrl: "https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/alumnos/41.jpg",
-    // }
+    }
 ];
 
 const CorePillars = () => {

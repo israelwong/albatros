@@ -38,7 +38,7 @@ const tecnoInfo = {
 
 const albatrosInfo = {
     phone: "5919170999",
-    whatsapp: "5585980923",
+    whatsapp: "5645489321",
     email: "gca.colegio.albatros@gmail.com",
     address: "Federico Gómez 32, Santiago 2.ª Sección, Zumpango, Estado de México.",
     mapsLink: "https://maps.app.goo.gl/sWVFJYMf5PBfmu886",

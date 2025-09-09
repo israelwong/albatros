@@ -1,21 +1,14 @@
 import React from 'react';
 // import Image from 'next/image';
-import { User } from 'lucide-react'; // Usaremos un ícono como placeholder
+
 
 const DirectorMessage = () => {
     return (
         <section className="bg-brand-background py-16 md:py-24">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-
-                    {/* Columna de la Fotografía (Placeholder) */}
-                    <div className="w-full aspect-[4/5] bg-gray-200 rounded-lg flex flex-col justify-center items-center text-gray-400">
-                        <User size={64} />
-                        <p className="mt-4 font-sans text-lg">Fotografía Próximamente</p>
-                    </div>
-
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-8 md:gap-12 items-center max-w-3xl mx-auto">
                     {/* Columna del Mensaje */}
-                    <div className="font-sans">
+                    <div className="font-sans text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                             Un Mensaje de Nuestra Directora
                         </h2>
@@ -32,7 +25,6 @@ const DirectorMessage = () => {
                             <p className="text-brand-text-light">Directora Administrativa</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

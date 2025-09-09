@@ -47,7 +47,9 @@ const albatrosData: CampusData = {
     email: "gca.colegio.albatros@gmail.com",
     googleMapsUrl: "https://www.google.com/maps/place/Grupo+Cultural+Albatros/@19.7918836,-99.1023795,17z/data=!3m1!4b1!4m6!3m5!1s0x85d18d179657b297:0xfb6932a392e21b06!8m2!3d19.7918836!4d-99.0998046!16s%2Fg%2F1tdy018t?hl=es-419&entry=ttu",
     googleMapsLink: "https://maps.app.goo.gl/sWVFJYMf5PBfmu886",
-    imageUrls: ["https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/caratulas-logos-colegio/caraluta-colegio-logo-albatros.png"],
+    imageUrls: [
+        ...Array.from({ length: 17 }, (_, i) => `https://sfsjdyuwttrcgchbsxim.supabase.co/storage/v1/object/public/albatros/arquitectura-albatros/${i + 1}.jpg`)
+    ],
     imagePosition: 'right'
 };
 
